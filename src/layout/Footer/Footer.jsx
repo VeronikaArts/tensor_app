@@ -80,7 +80,7 @@ const Footer = () => {
                     </div>
                   )}
             </div>
-            <hr/>
+            <hr className={footerStyle.line}/>
             <div className={footerStyle.bottomRow}>
                 {languages.map((item)=>
                     <span className={footerStyle.languagesItem}>
