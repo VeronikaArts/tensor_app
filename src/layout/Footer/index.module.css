@@ -6,7 +6,7 @@
 }
 
 .topRow {
-    padding: 30px 0;
+    padding: 30px 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     justify-content: space-around;
