@@ -1,0 +1,21 @@
+.main{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    margin: 70px 0 30px;
+}
+
+.mainLine{
+    background: #B90000;
+    width: 70px;
+    border: #B90000;
+    height: 2px;
+}
