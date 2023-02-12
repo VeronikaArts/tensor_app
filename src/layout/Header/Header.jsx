@@ -5,15 +5,16 @@ import {Link} from "react-router-dom";
 const Header = () => {
     return (
         <header className={headerStyle.header}>
-            <img className={headerStyle.logo} src={logo} alt='logo'/>
-                <ul className={headerStyle.items}>
-                    <li className={headerStyle.item}><Link to="/">Home</Link></li>
-                    <li className={headerStyle.item}><Link to="search">Live</Link></li>
-                    <li className={headerStyle.item}><Link to="search">Music</Link></li>
-                    <li className={headerStyle.item}><Link to="search">Charts</Link></li>
-                    <li className={headerStyle.item}><Link to="search">Events</Link></li>
-                    <li className={headerStyle.item}><Link to="search">Features</Link></li>
-                </ul>
+            <Link to="/"><img className={headerStyle.logo} src={logo} alt='logo'/></Link>
+            <ul className={headerStyle.items}>
+                <li className={headerStyle.item}><Link to="/">Home</Link></li>
+                <li className={headerStyle.item}><Link to="/search">Search</Link></li>
+                <li className={headerStyle.item}><Link to="/live">Live</Link></li>
+                <li className={headerStyle.item}><Link to="/music">Music</Link></li>
+                <li className={headerStyle.item}><Link to="/charts">Charts</Link></li>
+                <li className={headerStyle.item}><Link to="/events">Events</Link></li>
+                <li className={headerStyle.item}><Link to="/features">Features</Link></li>
+            </ul>
         </header>
     );
 };
