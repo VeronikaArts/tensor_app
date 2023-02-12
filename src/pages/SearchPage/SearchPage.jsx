@@ -11,6 +11,11 @@ const SearchPage = () => {
     const [searchedAlbums, setSearchedAlbums] = useState([]);
     const [searchedTracks, setSearchedTracks] = useState([]);
 
+    /**
+     * Метод получения артистов
+     * @param value
+     * @returns {Promise<void>}
+     */
     async function getArtists(value) {
         const {results: artists} = await api.getLastFmApi('artist.search', { artist: value});
 
@@ -23,6 +28,11 @@ const SearchPage = () => {
         setSearchedArtists([...finalArtists])
     }
 
+    /**
+     * Метод получения альбомов
+     * @param value
+     * @returns {Promise<void>}
+     */
     async function getAlbums(value) {
         const {results: albums} = await api.getLastFmApi('album.search', { album: value});
 
@@ -35,6 +45,11 @@ const SearchPage = () => {
         setSearchedAlbums([...finalAlbums])
     }
 
+    /**
+     * Метод получения треков
+     * @param value
+     * @returns {Promise<void>}
+     */
     async function getTracks(value) {
         const {results: tracks} = await api.getLastFmApi('track.search', { track: value});
 
@@ -47,6 +62,11 @@ const SearchPage = () => {
         setSearchedTracks([...finalTracks])
     }
 
+    /**
+     * Обработка нажатия кнопки поиска
+     * @param value
+     * @returns {Promise<void>}
+     */
     async function toSearch(value){
         await getArtists(value);
         await getAlbums(value);
